@@ -8,12 +8,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: rgb(119, 70, 223);
+  background-image: linear-gradient(rgb(119, 70, 223), blue);
+  /* background-color: rgb(119, 70, 223); */
   box-shadow: 5px 7px 13px black;
 }
 
 .btn {
-  background-color: rgb(119, 70, 223); /* Green */
+  background-color: rgb(119, 70, 223);
   border: none;
   color: black;
   border-radius: 8px;
@@ -26,7 +27,7 @@
 }
 
 .btn:hover {
-  background-color: rgb(223, 70, 70); /* Green */
+  background-color: rgb(143, 101, 211); /* Green */
   border: none;
   border-radius: 8px;
   color: black;

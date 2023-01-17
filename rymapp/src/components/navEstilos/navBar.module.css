@@ -1,19 +1,40 @@
 .container {
-  overflow: hidden;
-  background-color: #333;
+  width: 100vw;
+  height: 125px;
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(19, 30, 126),
+    rgb(163, 122, 240)
+  );
 }
 
 .navLista {
   display: flex;
   color: #f2f2f2;
   text-align: center;
-  padding: 14px 16px;
+  padding: 14px 18px;
   justify-content: space-around;
+  list-style: none;
 }
 
+li {
+  box-sizing: border-box;
+  font-size: large;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90px;
+  height: 50px;
+  background: rgb(51, 19, 61);
+  transition: 0.5s;
+  border-radius: 8px;
+}
 
-.navLista:hover {
-  background-color: #ddd;
-  color: black;
+li:hover {
+  box-sizing: border-box;
+  width: 100px;
+  height: 60px;
+  background: rgb(39, 19, 110);
+  transition: 0.5s;
 }
 
