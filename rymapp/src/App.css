@@ -1,3 +1,6 @@
 .App {
   text-align: center;
+  background-image: url("https://images.pexels.com/photos/7311920/pexels-photo-7311920.jpeg?cs=srgb&dl=pexels-alberlan-barros-7311920.jpg&fm=jpg");
+  background-size: contain;
+  height: 100%;
 }

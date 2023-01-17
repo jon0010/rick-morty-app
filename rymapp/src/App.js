@@ -1,25 +1,24 @@
+import React from "react";
+import characters from "./components/data.js";
 import "./App.css";
-import Card from "./components/CardEstilos/Card.jsx";
 import Cards from "./components/CardsEstilos/Cards.jsx";
-import characters, { Rick } from "./components/data.js";
-import navBar from "./components/navEstilos/navBar.jsx";
+import NavBar from "./components/navEstilos/NavBar.jsx";
 
 function App() {
+  // const [personajes, setPersonajes] = React.useState([]);
+  // const dataChar = {
+  //   name: "Morty Smith",
+  //   species: "Human",
+  //   gender: "Male",
+  //   image: "https://rickandmortyapi.com/api/character/avatar/2.jpeg",
+  // };
+
+  // const busquedaPersonajes = (personaje) => {
+  //   setPersonajes([...personajes, personajes.push(dataChar)]);
+  // };
   return (
     <div className="App" style={{ padding: "25px" }}>
-      <div>
-        <navBar onSearch={(characterID) => window.alert(characterID)} />
-      </div>
-      <hr />
-      <div>
-        <Card
-          name={Rick.name}
-          species={Rick.species}
-          gender={Rick.gender}
-          image={Rick.image}
-          onClose={() => window.alert("*se cerro la tarjeta*")}
-        />
-      </div>
+      <NavBar onSearch={(characterID) => window.alert(characterID)} />
       <hr />
       <div>
         <Cards characters={characters} />
