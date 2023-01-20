@@ -1,22 +1,15 @@
-import Card from "../CardEstilos/Card";
 import styles from "./Cards.module.css";
 
-export default function Cards(props) {
-  const { characters } = props;
+const Cards = ({ id, name, gender, image }) => {
   return (
     <div className={styles.divContainer}>
-      {characters.map(({ name, species, gender, image }) => {
-        return (
-          <Card
-            key={name}
-            name={name}
-            species={species}
-            gender={gender}
-            image={image}
-            onClose={() => window.alert("*se cierra la tarjeta*")}
-          />
-        );
-      })}
+      <h1>estas serian las cards</h1>
+      <img src={image} alt={name} />
+      <h1>{name}</h1>
+      <h2>{gender}</h2>
     </div>
   );
-}
+};
+
+
+export default Cards;

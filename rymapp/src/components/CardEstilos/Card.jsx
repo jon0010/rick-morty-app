@@ -1,15 +1,35 @@
+import { useDispatch, useSelector } from "react-redux";
+import { useEffect } from "react";
+import { getCharacters } from "../../redux/actions";
 import CardStyles from "./card.module.css";
+import Cards from "../CardsEstilos/Cards";
 
-export default function Card({ name, species, gender, image, onClose }) {
+const Card = () => {
+  const dispatch = useDispatch();
+  const cards = useSelector((state) => state.cards);
+
+  useEffect(() => {
+    dispatch(getCharacters());
+  }, []);
+
   return (
     <div className={CardStyles.divContainer}>
-      <button className={CardStyles.btn} onClick={onClose}>
-        X
-      </button>
-      <h2 className={CardStyles.name}>{name}</h2>
-      <h2 className={CardStyles.species}>Especie: {species}</h2>
-      <h2 className={CardStyles.gender}>Género: {gender}</h2>
-      <img className={CardStyles.cardImg} src={image} alt="img" />
+      <h1> personajes </h1>
+      {cards.map((character) => {
+        return (
+          <Cards
+            key={character.id}
+            id={character.id}
+            name={character.name}
+            gender={character.gender}
+            image={character.image}
+            species={character.species}
+            status={character.status}
+          />
+        );
+      })}
     </div>
   );
-}
+};
+
+export default Card;
