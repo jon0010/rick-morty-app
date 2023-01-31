@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Special+Elite&display=swap');
+
+
+.container {
+  background-image: url("../../img/rick_and_morty_background_no_6_by_jurokoo_dahrw5w.png") ;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+}
+
+.containerHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.titulo {
+  background: linear-gradient(to right, rgb(15, 144, 219) , rgb(15, 124, 24));
+  margin-top: 40px;
+  padding-top: 20px;
+  font-size: 10rem;
+  font-family: 'Press Start 2P', cursive;
+  font-family: 'Special Elite', cursive;
+
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.btn {
+
+}
+
+.imagenPortal {
+
+}
