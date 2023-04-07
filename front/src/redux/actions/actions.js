@@ -6,9 +6,9 @@ import {
 } from "./action-types";
 import axios from "axios";
 
-export const getCharacters = () => {
+export const getCharacters = (page) => {
   return async function (dispatch) {
-    let response = await axios.get("https://rickandmortyapi.com/api/character");
+    let response = await axios.get(`https://rickandmortyapi.com/api/character/?page=${page}`);
     return dispatch({ type: GET_CHARACTERS, payload: response.data.results });
   };
 };

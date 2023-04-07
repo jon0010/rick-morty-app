@@ -5,9 +5,9 @@ export default function NavBar(props) {
   return (
     <div>
       <nav className={NavBarStyles.container}>
-        <SearchBar onSearch={props} />
 
         <ul className={NavBarStyles.navLista}>
+        <SearchBar className={NavBarStyles.searchBar} onSearch={props} />
           <button className={NavBarStyles.btn}>Inicio</button>
           <button className={NavBarStyles.btn}>Explora</button>
           <button className={NavBarStyles.btn}>Personajes</button>

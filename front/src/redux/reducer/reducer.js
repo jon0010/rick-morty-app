@@ -3,6 +3,7 @@ import {
   DETALLE_PERSONAJE,
   LIMPIAR_DETALLE,
   LIMPIAR_PERSONAJES,
+  PAGINADO,
 } from "../actions/action-types";
 
 const initialState = {

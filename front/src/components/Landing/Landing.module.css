@@ -1,8 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Special+Elite&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Special+Elite&display=swap");
 
+* {
+  box-sizing: border-box;
+}
 
 .container {
-  background-image: url("../../img/rick_and_morty_background_no_6_by_jurokoo_dahrw5w.png") ;
+  background-image: url("../../img/rick_and_morty_background_no_6_by_jurokoo_dahrw5w.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -17,21 +20,133 @@
 }
 
 .titulo {
-  background: linear-gradient(to right, rgb(15, 144, 219) , rgb(15, 124, 24));
+  background: linear-gradient(to right, rgb(15, 144, 219), rgb(15, 124, 24));
   margin-top: 40px;
   padding-top: 20px;
   font-size: 10rem;
-  font-family: 'Press Start 2P', cursive;
-  font-family: 'Special Elite', cursive;
+  font-family: "Press Start 2P", cursive;
+  font-family: "Special Elite", cursive;
 
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
+  -webkit-animation: puff-in-center 0.7s cubic-bezier(0.47, 0, 0.745, 0.715)
+    both;
+  animation: puff-in-center 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) both;
+  @-webkit-keyframes 0% {
+    -webkit-transform: scale(2);
+    transform: scale(2);
+    -webkit-filter: blur(4px);
+    filter: blur(4px);
+    opacity: 0;
+  }
+  @100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+@keyframes puff-in-center {
+  0% {
+    -webkit-transform: scale(2);
+    transform: scale(2);
+    -webkit-filter: blur(4px);
+    filter: blur(4px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1;
+  }
 }
 
 .btn {
-
+  background-image: url("../../img/portal-dimensional.gif");
+  background-size: auto;
+  background-repeat: no-repeat;
+  height: 14rem;
+  width: 14rem;
+  border-radius: 50%;
+  background-position: center;
+  border: none;
 }
 
-.imagenPortal {
+.btn:hover {
+  animation-name: shakefix;
+  -webkit-animation-name: shakefix;
+  -moz-animation-name: shakefix;
+  animation-duration: 1s;
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+}
 
+@keyframes shakefix {
+  0% {
+    transform: translate(1px, 1px);
+  }
+  10% {
+    transform: translate(-1px, -2px);
+  }
+  20% {
+    transform: translate(-3px, 0px);
+  }
+  30% {
+    transform: translate(3px, 2px);
+  }
+  40% {
+    transform: translate(1px, -1px);
+  }
+  50% {
+    transform: translate(-1px, 2px);
+  }
+  60% {
+    transform: translate(-3px, 1px);
+  }
+  70% {
+    transform: translate(3px, 1px);
+  }
+  80% {
+    transform: translate(-1px, -1px);
+  }
+  90% {
+    transform: translate(1px, 2px);
+  }
+  100% {
+    transform: translate(1px, -2px);
+  }
+}
+
+.txtClick {
+  font-size: large;
+  font-family: "Press Start 2P", cursive;
+  font-family: "Special Elite", cursive;
+}
+
+.text1 {
+  margin-left: 3rem;
+  margin-right: 3rem;
+  width: 75%;
+  padding: 1rem;
+  font-size: 1.6em;
+  font-family: "Press Start 2P", cursive;
+  font-family: "Special Elite", cursive;
+  color: rgb(178, 245, 24);
+  text-shadow: 1rem 1rem 2rem rgb(25, 133, 79), 0 0 40px rgb(13, 100, 25),
+    0 0 5px rgb(44, 70, 29);
+  text-align: center;
+  box-sizing: border-box;
+  transition: all 1s ease-out;
+  line-break: loose;
+}
+
+.text1:hover {
+  font-size: 1.7em;
+  transition: all 1s ease-out;
 }
